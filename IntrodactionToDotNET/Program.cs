@@ -1,5 +1,5 @@
 ﻿//#define CONSOLE_CLASS
-#define STRING_OPERATIONS
+//#define STRING_OPERATIONS
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,22 +8,22 @@ using System.Threading.Tasks;
 
 namespace IntrodactionToDotNET
 {
-    internal class Program
-    {
-    static readonly String delimiter = "\n_____________________________________\n";
-        static void Main(string[] args)
-        {
-            Console.Title = "Inntrodution to .NET";
-            Console.WriteLine("\t\tHello .NET");
-            //Console.CursorLeft = 25;
-            // Console.CursorTop = 8;
-            Console.SetCursorPosition(21, 5);
-            Console.BackgroundColor = ConsoleColor.DarkBlue;
-            Console.ForegroundColor = ConsoleColor.Gray;
-            Console.WriteLine("Привет .NET");
-            Console.ResetColor();
+	internal class Program
+	{
+		static readonly String delimiter = "\n_____________________________________\n";
+		static void Main(string[] args)
+		{
+			Console.Title = "Inntrodution to .NET";
+			Console.WriteLine("\t\tHello .NET");
+			//Console.CursorLeft = 25;
+			// Console.CursorTop = 8;
+			Console.SetCursorPosition(21, 5);
+			Console.BackgroundColor = ConsoleColor.DarkBlue;
+			Console.ForegroundColor = ConsoleColor.Gray;
+			Console.WriteLine("Привет .NET");
+			Console.ResetColor();
 
-            Console.WriteLine(delimiter);
+			Console.WriteLine(delimiter);
 
 #if CONSOLE_CLASS
 
@@ -54,6 +54,54 @@ namespace IntrodactionToDotNET
             Console.WriteLine(String.Format("{0}{1}{2}", first_name, last_name, age));
             Console.WriteLine($"{first_name}{last_name}{age}"); 
 #endif
-        }
+			// SQUARE
+			int n = Convert.ToInt32(Console.ReadLine());
+			for (int i = 0; i < n; i++)
+			{
+				for (int j = 0; j < n; j++)
+					Console.Write("* ");
+				Console.WriteLine();
+			}
+			Console.WriteLine();
+			Console.WriteLine(delimiter);
+
+			// TRIANGLE_1
+			for (int i = 0; i < n; i++)
+			{
+				for (int j = 0; j <= i; j++)
+				{
+					Console.Write("* ");
+				}
+				Console.WriteLine();
+			}
+			Console.WriteLine(delimiter);
+
+			// TRIANGLE_2
+			for (int i = 0; i < n; i++)
+			{
+				for (int j = i; j < n; j++)
+				{
+					Console.Write("* ");
+				}
+				Console.WriteLine();
+				Console.WriteLine(delimiter);
+
+				// TRIANGLE_3
+				for ( i = 0; i < n; i++)
+				{
+					for (int h = 0; h < i; h++)
+					{
+						Console.Write(" ");
+					}
+					for (int j = i; j < n; j++)
+					{
+						Console.Write("* ");
+					}
+					Console.WriteLine();
+
+				}
+					Console.WriteLine(delimiter);
+			}
+		}
 	}
 }
