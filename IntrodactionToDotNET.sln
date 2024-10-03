@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntrodactionToDotNET", "Int
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataType", "DataType\DataType.csproj", "{C9FA8B81-1396-4B6F-A672-B1C9E4379C2F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Factorial", "Factorial\Factorial.csproj", "{DD8D0C77-7A8E-499C-844C-65FD48D69DF2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{C9FA8B81-1396-4B6F-A672-B1C9E4379C2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C9FA8B81-1396-4B6F-A672-B1C9E4379C2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C9FA8B81-1396-4B6F-A672-B1C9E4379C2F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD8D0C77-7A8E-499C-844C-65FD48D69DF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD8D0C77-7A8E-499C-844C-65FD48D69DF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD8D0C77-7A8E-499C-844C-65FD48D69DF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD8D0C77-7A8E-499C-844C-65FD48D69DF2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
