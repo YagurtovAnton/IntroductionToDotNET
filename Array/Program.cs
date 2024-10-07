@@ -1,6 +1,7 @@
 ﻿#define ARRAYS_1
-#define ARRAYS_2
-//#define JAGED_ARRAY
+//#define DEBUG
+//#define ARRAYS_2
+#define JAGED_ARRAY
 
 using System;
 using System.Collections.Generic;
@@ -24,10 +25,13 @@ namespace Array
 			{
 				arr[i] = rend.Next(100);
 			}
+#if DEBUG
 			for (int i = 0; i < arr.Length; i++)
 			{
 				Console.Write(arr[i] + "\t");
 			}
+
+#endif
 			Console.WriteLine();
 			foreach (int i in arr)//Range-based for
 			{
@@ -77,13 +81,30 @@ namespace Array
 			};
 			for (int i = 0; i < arr_jagged.Length; i++)
 			{
-				for (int j = 0;j< arr_jagged[i].Length; j++);
+				for (int j = 0;j< arr_jagged[i].Length; j++)
 				{
 					Console.Write(arr_jagged[i][j] + "\t");
 				}
                 Console.WriteLine();
             }
 #endif
+			Console.WriteLine();
+			int sum = 0;
+			for ( int i = 0; i < arr.Length; i++)
+			{
+				sum += arr[i];
+			}
+			Console.WriteLine(	$"Сумма элеметов массива ............ {sum}");
+			Console.WriteLine(	$"Сркднее-арифметическое ............ {(double)sum/n}");
+			int min, max;
+			min = max = arr[0];
+			for (int i = 0; i < arr.Length; i++)
+			{
+				if (arr[i] < min) min = arr[i];
+				if (arr[i] > max) max = arr[i];
+			}
+			Console.WriteLine(	$"Минимальное значение в массиве..... {min}\n" +
+								$"Максимальное значение в массиве.... {max}\n");
 
 		}
 	}
